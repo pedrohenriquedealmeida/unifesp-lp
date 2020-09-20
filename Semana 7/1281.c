@@ -8,11 +8,11 @@ typedef struct{
 
 fruta frutas[10000];
 
-int main() {
+int main(){
 	
 	char fruta_comprada[51];
 	int casos, tamanho_lista_disponiveis, tamanho_lista_comprado, qnt, s;
-    int aux, aux2;
+    	int aux, aux2;
 	double total;
 
 	scanf("%d", &casos);
