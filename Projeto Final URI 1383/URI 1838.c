@@ -5,7 +5,7 @@ int test3x3 (int *);
 int main(){
 
     int cel[9][9];
-    int valorInst[1000];
+    int resp;
     int testLin=1, testCol=1, testReg=1;
     int provaLin=1, provaCol=1, provaReg=1;
 
@@ -14,10 +14,9 @@ int main(){
 
     scanf("%d", &n);
 
-    for(k=0;k<n;k++) valorInst[k]=1;
-
     for(k=0;k<n;k++){
-
+        
+        resp=1;
         testLin=1; testCol=1; testReg=1;
         provaLin=1; provaCol=1; provaReg=1;
 
@@ -26,7 +25,7 @@ int main(){
             for(j=0;j<9;j++){
                 if(i==8&&j==8) scanf("%d", &cel[i][j]);
                 else scanf("%d ", &cel[i][j]);
-                if(cel[i][j]==0) valorInst[k] = 0;
+                if(cel[i][j]==0) resp = 0;
             }
         }
 
@@ -56,14 +55,12 @@ int main(){
                 }
         }
 
-        if(provaCol==0||provaLin==0||provaReg==0) valorInst[k]=0;
-    }
-
-    //IMPRESSAO
-    for(k=0;k<n;k++){
+        if(provaCol==0||provaLin==0||provaReg==0) resp=0;
+        
+        //IMPRESSAO
         printf("Instancia %d\n", k+1);
-        if(valorInst[k]==0) printf("NAO\n\n");
-        if(valorInst[k]==1) printf("SIM\n\n");
+        if(resp==0) printf("NAO\n\n");
+        if(resp==1) printf("SIM\n\n");
     }
         
     return 0;
