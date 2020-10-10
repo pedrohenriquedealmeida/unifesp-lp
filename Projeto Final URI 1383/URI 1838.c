@@ -6,7 +6,6 @@ int main(){
 
     int cel[9][9];
     int valorInst[1000];
-    int somaL=0, somaC=0;
     int testLin=1, testCol=1, testReg=1;
     int provaLin=1, provaCol=1, provaReg=1;
 
